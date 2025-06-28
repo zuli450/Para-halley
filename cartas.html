@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Necesario -->
     <title>Cartas a Halley</title>
     <style>
         body {
@@ -9,11 +10,21 @@
             background-color: #fffafc;
             padding: 20px;
             text-align: center;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
         }
 
         .carta {
-            margin: 30px auto;
+            margin: 20px auto;
             max-width: 90%;
+        }
+
+        .carta p {
+            font-size: 18px;
         }
 
         .carta img {
@@ -28,7 +39,7 @@
             background-color: #ff69b4;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
@@ -42,6 +53,26 @@
         .botones-después {
             display: none;
             margin-top: 10px;
+        }
+
+        /* Diseño para teléfonos */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px;
+            }
+
+            .carta p {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 14px;
+            }
+
+            .carta img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
