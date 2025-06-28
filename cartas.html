@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartas a Halley</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffafc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .carta {
+            margin: 30px auto;
+            max-width: 90%;
+        }
+
+        .carta img {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            background-color: #ff85c1;
+        }
+
+        .botones-después {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cartas a Halley 💖</h1>
+
+    <!-- Carta 1 -->
+    <div class="carta">
+        <p>✨ Carta 1 ✨</p>
+        <button onclick="mostrarCarta('carta1')">Ver Carta</button>
+        <img id="carta1" src="carta 1.jpg" alt="Carta 1">
+        <div id="botones-carta1" class="botones-después">
+            <button onclick="ocultarCarta('carta1')">Cerrar Carta</button>
+        </div>
+    </div>
+
+    <!-- Carta 2 -->
+    <div class="carta">
+        <p>💌 Carta 2 💌</p>
+        <button onclick="mostrarCarta('carta2')">Ver Carta</button>
+        <img id="carta2" src="carta 2.jpg" alt="Carta 2">
+        <div id="botones-carta2" class="botones-después">
+            <button onclick="ocultarCarta('carta2')">Cerrar Carta</button>
+        </div>
+    </div>
+
+    <!-- Carta 3 -->
+    <div class="carta">
+        <p>🌙 Carta 3 🌙</p>
+        <button onclick="mostrarCarta('carta3')">Ver Carta</button>
+        <img id="carta3" src="carta 3.jpg" alt="Carta 3">
+        <div id="botones-carta3" class="botones-después">
+            <button onclick="ocultarCarta('carta3')">Cerrar Carta</button>
+        </div>
+    </div>
+
+    <!-- Carta 4 -->
+    <div class="carta">
+        <p>🌟 Carta 4 🌟</p>
+        <button onclick="mostrarCarta('carta4')">Ver Carta</button>
+        <img id="carta4" src="carta 4.jpg" alt="Carta 4">
+        <div id="botones-carta4" class="botones-después">
+            <button onclick="ocultarCarta('carta4')">Cerrar Carta</button>
+        </div>
+    </div>
+
+    <br>
+    <button onclick="window.location.href='index.html'">Volver al inicio</button>
+
+    <script>
+        function mostrarCarta(id) {
+            const img = document.getElementById(id);
+            const botones = document.getElementById('botones-' + id);
+            img.style.display = 'block';
+            botones.style.display = 'block';
+        }
+
+        function ocultarCarta(id) {
+            const img = document.getElementById(id);
+            const botones = document.getElementById('botones-' + id);
+            img.style.display = 'none';
+            botones.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

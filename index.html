@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holis</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        img {
+            display: none;            /* Oculta la imagen inicialmente */
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #ff69b4; /* Rosa */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff85c1;
+        }
+    </style>
+</head>
+<body>
+    <h1>💖 Si estás teniendo un mal día, presiona el botón :> 💖 </h1>
+    <button onclick="mostrarImagen()">Presióname</button>
+
+    <!-- Imagen y nuevo botón para cerrarla -->
+    <img id="imagenFeliz" src="brishos.jpg" alt="Imagen feliz">
+    <button id="cerrarBtn" onclick="ocultarImagen()" style="display:none;">Cerrar imagen</button>
+
+    <h1>🌠¿Quieres saber qué suena en mi cabeza cuando pienso en ti? 🌠</h1>
+    <button onclick="window.open('https://youtu.be/Rk6OotWicQk?si=bCabGKoxEOSut8oS','_blank')">Escúchalo aquí</button>
+
+    <h1>Cartas a Halley🌟</h1>
+    <button onclick="window.location.href='cartas.html'">Leer las cartas</button>
+
+    <script>
+        /* Muestra la imagen y el botón de cierre */
+        function mostrarImagen() {
+            const imagen = document.getElementById('imagenFeliz');
+            const cerrar  = document.getElementById('cerrarBtn');
+            imagen.style.display = 'block';
+            cerrar.style.display = 'inline-block';
+        }
+
+        /* Oculta ambos elementos */
+        function ocultarImagen() {
+            const imagen = document.getElementById('imagenFeliz');
+            const cerrar  = document.getElementById('cerrarBtn');
+            imagen.style.display = 'none';
+            cerrar.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
